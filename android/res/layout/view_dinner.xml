@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView android:id="@+id/title" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:gravity="center"
+		android:layout_marginTop="10dp" android:layout_marginLeft="5dp"
+		android:textAppearance="?android:attr/textAppearanceMedium" />
+
+	<com.google.android.maps.MapView
+		android:id="@+id/mapview2" android:layout_width="fill_parent"
+		android:layout_height="150dp" android:enabled="true"
+		android:clickable="false" android:apiKey="@string/maps_api_key"
+		android:layout_marginTop="10dp" android:layout_marginBottom="10dp" />
+
+	<TextView android:id="@+id/whenlabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/when"
+		android:textStyle="bold" />
+
+	<TextView android:id="@+id/when" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginLeft="5dp" />
+
+	<TextView android:id="@+id/wherelabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/where"
+		android:textStyle="bold" />
+	<TextView android:id="@+id/where" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginLeft="5dp" />
+
+	<TextView android:id="@+id/desclabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/desc"
+		android:textStyle="bold" />
+	<TextView android:id="@+id/description" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginLeft="5dp" />
+
+	<TextView android:id="@+id/orglabel" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:text="@string/organizer"
+		android:textStyle="bold" />
+	<TextView android:id="@+id/organizer" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_marginLeft="5dp"
+		android:layout_marginBottom="10dp" />
+
+	<Button android:id="@+id/attendees" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:text="@string/attendees" />
+
+</LinearLayout>
+

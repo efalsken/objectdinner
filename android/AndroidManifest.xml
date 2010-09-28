@@ -1,0 +1,32 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.androidstartup.view"
+    android:versionCode="2"
+    android:versionName="0.4">
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <application android:icon="@drawable/icon" android:debuggable="true">
+    	<uses-library android:name="com.google.android.maps" />
+        <activity 
+        	class=".AndroidND" 
+        	android:name="AndroidND" 
+        	android:label="NerdDinner for Android" 
+        	android:screenOrientation="sensor">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity class=".Search" android:name="Search" android:label="Find"/>
+        <activity class=".DinnerList" android:name="DinnerList" android:label="Dinners"/>
+        <activity class=".SearchList" android:name="SearchList" android:label="Search Results"/>
+        <activity class=".AddDinner" android:name="AddDinner" android:label="Add Dinner"/>
+        <activity class=".ViewDinner" android:name="ViewDinner" android:label="View Dinner"/>
+        <activity class=".JoinDinner" android:name="JoinDinner" android:label="Join Dinner"/>
+        <activity class="com.db4o.android.Db4oClient" android:name="com.db4o.android.Db4oClient" android:label="db4o Service"/>
+		<service android:enabled="true" android:name="com.db4o.android.Db4oService" android:process=":remote" />
+    </application>
+</manifest> 
