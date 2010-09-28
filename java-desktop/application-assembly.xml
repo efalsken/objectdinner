@@ -8,7 +8,7 @@
     <moduleSets>
         <moduleSet>
             <includes>
-                <include>info.gamlor.icoodb:boot</include>
+                <include>info.gamlor.icoodb:desktop-app-bootstrapper</include>
             </includes>
             <binaries>
                 <unpack>false</unpack>
@@ -16,7 +16,7 @@
         </moduleSet>
         <moduleSet>
             <includes>
-                <include>info.gamlor.icoodb:desktop</include>
+                <include>info.gamlor.icoodb:db4o-nerdinner-swing-app</include>
             </includes>
             <binaries>
                 <outputDirectory>application</outputDirectory>
