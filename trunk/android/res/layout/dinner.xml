@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TableLayout android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_title" />
+				<EditText android:id="@+id/dinner_title" 
+				  	android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_weight="1"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_date" />
+				
+				<DatePicker android:id="@+id/dinner_date" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"></DatePicker>		
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_hostname" />
+				<EditText android:id="@+id/dinner_hostname" 
+				  	android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_weight="1"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_cinfo" />
+				<EditText android:id="@+id/dinner_cinfo" 
+				  	android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_weight="1"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_address" />
+				<EditText android:id="@+id/dinner_address" 
+				  	android:layout_width="wrap_content"
+					android:layout_height="wrap_content" 
+					android:layout_weight="1"/>
+			</TableRow>
+			<TableRow>
+				<TextView android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/dinner_country" />
+				<Spinner android:id="@+id/dinner_country" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+				</Spinner>
+			</TableRow>
+	</TableLayout>
+
+	<TextView android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text="@string/dinner_desc" />
+	<EditText android:id="@+id/dinner_desc"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:scrollbars="vertical" />
+	
+	<Button android:id="@+id/save" 
+	  	android:text="@string/saveButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" />
+
+</LinearLayout>
