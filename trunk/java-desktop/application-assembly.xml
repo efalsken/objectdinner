@@ -11,7 +11,9 @@
                 <include>info.gamlor.icoodb:desktop-app-bootstrapper</include>
             </includes>
             <binaries>
+                <outputFileNameMapping>${module.artifactId}.jar</outputFileNameMapping>
                 <unpack>false</unpack>
+
             </binaries>
         </moduleSet>
         <moduleSet>
