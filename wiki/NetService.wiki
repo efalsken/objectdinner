@@ -1,0 +1,21 @@
+#summary Db4o Windows Service (.NET) README
+
+=Db4o Windows Service (.NET)=
+
+==Usage==
+
+*DB4ONETSERVICE.EXE* /install /run /uninstall
+  /install	Installs as a Windows Service (Configured to use the Network Service account)
+  /run		After installing, start the service
+  /uninstall	Uninstalls the Windows Service.
+
+Must be run as an administrator.
+The Shortcuts /I, /R, and /U may also be used.
+
+==Configuration==
+The application .config file contains a few settings in the standard .NET XML config file format.
+
+|| DatabaseFileName || Absolute or Relative (from the service EXE) path to the desired .db4o file. The service “Run As” account must have full access to this file path. ||
+|| ListenPort || Which port number to run the db4o server on. ||
+|| Username || The username which clients will be required to supply when connecting to this server. ||
+|| Password || The password which clients will be required to supply when connecting to this server. ||
