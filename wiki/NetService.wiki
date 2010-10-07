@@ -4,7 +4,7 @@
 
 ==Usage==
 
-`*DB4ONETSERVICE.EXE* /install /run /uninstall`
+`DB4ONETSERVICE.EXE /install /run /uninstall`
 || `/install` || Installs as a Windows Service (Configured to use the Network Service account) ||
 || `/run` || After installing, start the service ||
 || `/uninstall` || Uninstalls the Windows Service ||
