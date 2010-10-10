@@ -84,6 +84,14 @@ public class  TestOpenIdController {
         verify(mockSession).setAttribute(Matchers.eq(LoggedInUser.USER_IS_AUTHENTICATED), Matchers.<Object>any());
     }
     @Test
+    public void demoLogin(){
+        HttpSession mockSession = mock(HttpSession.class);
+        when(mockHTTP.getSession()).thenReturn(mockSession);
+        View view = toTest.demoLogin(mockHTTP);
+
+        verify(mockSession).setAttribute(Matchers.eq(LoggedInUser.USER_IS_AUTHENTICATED), Matchers.<Object>any());
+    }
+    @Test
     public void noConfirmationIfNoToken(){
         HttpSession mockSession = mock(HttpSession.class);
         when(mockHTTP.getSession()).thenReturn(mockSession);

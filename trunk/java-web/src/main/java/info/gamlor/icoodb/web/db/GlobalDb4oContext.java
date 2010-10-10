@@ -67,7 +67,6 @@ public class GlobalDb4oContext implements DisposableBean, ServletContextAware {
 
     @Override
     public void setServletContext(ServletContext servletContext) {
-        String oldName = databaseFile;
         this.databaseFile = servletContext.getRealPath(databaseFile);
     }
 }

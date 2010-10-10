@@ -78,7 +78,7 @@ public class HomeController {
 
     @RequestMapping(value = "saveDinner.json", method = RequestMethod.POST)
     public ModelAndView saveDinner(@Valid DinnerViewModel data, BindingResult result) {
-        if (this.userLogic.knowsUser() && !result.hasErrors()) {
+        if (!result.hasErrors()) {
             final Dinner dinner = logic.byIdOrNew(data.getId());
             dinner.setHostedByIdentity(userLogic.loggedInUser());
             DinnerMapper.fromViewModel(data, dinner);
