@@ -67,13 +67,13 @@ public class TestHomeController {
     }
 
     @Test
-    public void dontStoreIfNotLoggedIn() {
+    public void storeIfNotLoggedIn() {
         userLogic.notLoggedIn();
         DinnerViewModel dinner = dinnerToStore();
         toTest.saveDinner(dinner, MockBindingResult.valid());
 
         final ObjectSet<Dinner> dinners = db.query(Dinner.class);
-        assertEquals(dinners.size(), 0);
+        assertEquals(dinners.size(), 1);
     }
 
     @Test

@@ -119,6 +119,13 @@ function showLoginPanel() {
             openIdLoginForm.getForm().submit();
         }
     });
+    openIdLoginForm.addButton({
+        text: 'Demo Login',
+        enabled:false,
+        handler: function() {
+            window.location = "/openid/demoLogin.html"
+        }
+    });
     return openIdLoginForm;
 }
 
@@ -422,7 +429,11 @@ Ext.onReady(function() {
     };
 
     function newHostPanelWithEmptyMap() {
-        return showHostPanel(null, mapControl);
+        if (dinnerApp.logginState) {
+            return showHostPanel(null, mapControl);
+        } else {
+            return showLoginPanel();
+        }
     }
 
     var action = location.hash;

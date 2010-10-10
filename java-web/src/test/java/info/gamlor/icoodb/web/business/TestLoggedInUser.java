@@ -70,12 +70,20 @@ public class TestLoggedInUser {
         prepareLoggedIn();
         assertEquals(USER_ID,toTest.loggedInUser().getIdentity());
     }
-    @Test(expectedExceptions = {IllegalStateException.class})
-    public void throwsIfNoUser(){
-        toTest.loggedInUser();
+    
+    @Test
+    public void returnsAnonymousUser(){
+        prepareLoggedIn("anonymous");
+        UserIdentity identity = toTest.loggedInUser();
+        assertNotNull(identity);
+        assertEquals("anonymous",identity.getIdentity());
+    }
+
+    private void prepareLoggedIn(String userId) {
+        when(mockSession.getAttribute(LoggedInUser.USER_IS_AUTHENTICATED)).thenReturn(userId);
     }
 
     private void prepareLoggedIn() {
-        when(mockSession.getAttribute(LoggedInUser.USER_IS_AUTHENTICATED)).thenReturn(USER_ID);
+        prepareLoggedIn(USER_ID);
     }
 }

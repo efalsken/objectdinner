@@ -101,6 +101,14 @@ public class OpenIdController {
     }
 
 
+
+    @RequestMapping(value = "demoLogin.html", method = RequestMethod.GET)
+    public View demoLogin(HttpServletRequest request) {
+        request.getSession().setAttribute(LoggedInUser.USER_IS_AUTHENTICATED, LoggedInUser.ANONYMOUS.getIdentity());
+        return redirectHome();
+    }
+
+
     @RequestMapping(value = "logout.html")
     public View logout(HttpSession session) {
         session.removeAttribute(LoggedInUser.USER_IS_AUTHENTICATED);

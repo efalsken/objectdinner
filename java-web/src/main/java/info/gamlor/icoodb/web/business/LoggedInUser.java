@@ -26,6 +26,8 @@ public class LoggedInUser {
     private ObjectContainer container;
     public static final String USER_IS_AUTHENTICATED = "USER_AUTH_TOKEN";
 
+    public static final UserIdentity ANONYMOUS = new UserIdentity("anonymous");
+
 
     public LoggedInUser() {
     }
@@ -49,7 +51,6 @@ public class LoggedInUser {
 
     @Transactional
     public UserIdentity loggedInUser() {
-        ensureHasUser();
         final String idString =  userIdString();
 
         List<UserIdentity> ids = queryForUser(idString);
@@ -75,12 +76,6 @@ public class LoggedInUser {
                 return o.getIdentity().equals(idString);
             }
         });
-    }
-
-    private void ensureHasUser() {
-        if(!knowsUser()){
-            throw new IllegalStateException("Requires a user. Check with knowsUser first");
-        }
     }
 
     private String userIdString() {

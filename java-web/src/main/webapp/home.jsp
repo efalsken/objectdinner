@@ -37,9 +37,8 @@
             <ul id="menu">
                 <li><a href="">Find Dinner</a></li>
 
-                <c:if test="${loggedIn}">
-                    <li><a href="#host" id="hostButton">Host Dinner</a></li>
-                </c:if>
+                <li><a href="#host" id="hostButton">Host Dinner</a></li>
+
 
                 <li class="last"><a href="">About</a></li>
             </ul>
