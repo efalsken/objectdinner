@@ -3,11 +3,18 @@
 = Introduction =
 This is an example web application build with db4o, Spring Webflow and ExtJS.
 
+= Running The Application =
+  * First [http://code.google.com/p/objectdinner/downloads/detail?name=java-web.2010.10.11.zip download] the demo application. The application is distributed with the Jetty webserver. 
+  * Unzip the zip-file.
+  * Run the start.jar: java -jar start.jar (or double-click on windows)
+   * Open your Browser, go to http://localhost:8080
+
 = Running The Application From Source =
   * First checkout the source code: http://objectdinner.googlecode.com/svn/trunk/java-web/
   * Open the console an navigate to the checkout directory
   * Use [http://maven.apache.org/ Maven] to run the application: mvn jetty:run
-  * Open your Browser, goto localhost:8080
+  * Open your Browser, go to http://localhost:8080
+
 
 
 = Using the Source =
