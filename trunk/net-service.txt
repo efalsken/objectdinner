@@ -1,0 +1,2 @@
+moved to db4o-extras
+http://code.google.com/p/db4o-extras/
