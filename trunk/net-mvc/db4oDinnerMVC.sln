@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db4oDinnerMVC", "db4oDinnerMVC.csproj", "{F5140976-50F0-415B-8E95-428894D57776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db4objects.Db4o.Web", "..\Db4objects.Db4o.Web\Db4objects.Db4o.Web.csproj", "{74893EF1-085A-4473-A065-C851CC0AA8AB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gamlor.ICOODB.Db4oUtils", "..\Gamlor.ICOODB.Db4oUtils\Gamlor.ICOODB.Db4oUtils.csproj", "{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,14 +13,6 @@ Global
 		{F5140976-50F0-415B-8E95-428894D57776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5140976-50F0-415B-8E95-428894D57776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5140976-50F0-415B-8E95-428894D57776}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74893EF1-085A-4473-A065-C851CC0AA8AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74893EF1-085A-4473-A065-C851CC0AA8AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74893EF1-085A-4473-A065-C851CC0AA8AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74893EF1-085A-4473-A065-C851CC0AA8AB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

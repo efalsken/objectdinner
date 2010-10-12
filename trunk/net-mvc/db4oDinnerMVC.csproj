@@ -33,13 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Db4objects.Db4o, Version=8.0.156.14687, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\db4o\net-3.5\Db4objects.Db4o.dll</HintPath>
+    <Reference Include="Db4objects.Db4o, Version=8.0.156.14687, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL" />
+    <Reference Include="Db4objects.Db4o.AutoIncrement">
+      <HintPath>..\lib\db4o-extras\AutoIncrement\Db4objects.Db4o.AutoIncrement.dll</HintPath>
     </Reference>
-    <Reference Include="Db4objects.Db4o.Linq, Version=8.0.156.14687, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
+    <Reference Include="Db4objects.Db4o.CS, Version=8.0.156.14687, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\db4o\net-3.5\Db4objects.Db4o.Linq.dll</HintPath>
+      <HintPath>..\lib\db4o\net-4.0\Db4objects.Db4o.CS.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Linq, Version=8.0.156.14687, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL" />
+    <Reference Include="Db4objects.Db4o.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>C:\Projects\objectdinner\lib\db4o-extras\Web\Db4objects.Db4o.Web.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -159,16 +163,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Models\Model.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Db4objects.Db4o.Web\Db4objects.Db4o.Web.csproj">
-      <Project>{74893EF1-085A-4473-A065-C851CC0AA8AB}</Project>
-      <Name>Db4objects.Db4o.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Gamlor.ICOODB.Db4oUtils\Gamlor.ICOODB.Db4oUtils.csproj">
-      <Project>{5ED9FCC9-0C92-441B-BD69-4BA648DAA547}</Project>
-      <Name>Gamlor.ICOODB.Db4oUtils</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
