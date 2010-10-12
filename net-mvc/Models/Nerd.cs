@@ -5,12 +5,13 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Security.Principal;
+using Db4objects.Db4o.AutoIncrement;
 
 namespace db4oDinnerMVC.Models {
 	[DisplayColumn("Name", "Name")]
 	public class Nerd : IIdentity {
 		//A numerical ID is only necessary because it's easier to handle in the URL path.
-		[Gamlor.ICOODB.Db4oUtils.AutoIncrement]
+		[AutoIncrement]
 		public int ID { get; private set; }
 
 		public string Name { get; set; }

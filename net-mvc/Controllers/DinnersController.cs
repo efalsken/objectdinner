@@ -76,13 +76,13 @@ namespace db4oDinnerMVC.Controllers {
 		// POST: /Dinners/Edit/5
 		[HttpPost, Authorize]
 		public ActionResult Edit(int id, FormCollection collection) {
-
+			Dinner dinner = null;
 
 			// Validate the view model
 			if (ModelState.IsValid) {
 
 				// MVC is stateless, so get the Dinner we are modifying from the DB.
-				Dinner dinner = dinnerRepository.GetDinner(id);
+				dinner = dinnerRepository.GetDinner(id);
 
 				// populate my current instance with updated form data
 				UpdateModel(dinner);

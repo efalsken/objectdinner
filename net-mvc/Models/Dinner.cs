@@ -7,13 +7,14 @@ using System.Web.Mvc;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Linq;
 using Db4objects.Db4o.Web;
+using Db4objects.Db4o.AutoIncrement;
 
 namespace db4oDinnerMVC.Models {
 	[Bind(Include = "Title,Description,EventDate,Address,Country,ContactPhone,Latitude,Longitude")]
 	[MetadataType(typeof(Dinner_Validation))]
 	public class Dinner {
 		//A numerical ID is only necessary because it's easier to handle in the URL path.
-		[Gamlor.ICOODB.Db4oUtils.AutoIncrement]
+		[AutoIncrement]
 		public int ID { get; private set; }
 		public string Title { get; set; }
 		public DateTime EventDate { get; set; }

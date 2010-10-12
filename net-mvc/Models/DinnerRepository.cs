@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using Db4objects.Db4o;
 using Db4objects.Db4o.Linq;
-using Gamlor.ICOODB.Db4oUtils;
+using Db4objects.Db4o.AutoIncrement;
 
 namespace db4oDinnerMVC.Models {
 	public class DinnerRepository {
